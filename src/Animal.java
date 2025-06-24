@@ -106,7 +106,6 @@ abstract class Animal implements Vaccinateable, Treatable {
     public String toString() {
         return "name='" + name + '\'' +
                 ", age=" + age +
-                ", number=" + animalNumber +
-                '}';
+                ", number=" + animalNumber;
     }
 }
