@@ -6,7 +6,7 @@ abstract class Animal implements Vaccinateable, Treatable {
     protected String name; // naam van het dier
     protected int age; // leeftijd van het dier
     protected boolean isClean; // geeft aan of het dier schoon/behandeld is
-    protected Map<Disease, Boolean> isVaccinated; // houdt bij of dier gevaccineerd is tegen elke ziekte
+    protected Map<Disease, Boolean> isVaccinated; // houdt bij of dier gevaccineerd is tegen elke ziekte (true/false)
     protected static int animalId = 1; // gebruikt om animalNumber automatisch toe te wijzen
 
     // Lege constructor
@@ -15,9 +15,10 @@ abstract class Animal implements Vaccinateable, Treatable {
         this.name = "Unknown";
         this.age = 0;
         this.isClean = false;
-        this.isVaccinated = new EnumMap<>(Disease.class); // is een speciale soort Map in Java die alleen gebruikt wordt met enum
+        this.isVaccinated = new EnumMap<>(Disease.class); // is een speciale soort Map in Java die alleen gebruikt wordt met enum.
+        // We gebruiken het, omdat EnumMap moet weten welk enum-type je als sleutel gebruikt, en dat geef je zo aan.
         for (Disease d : Disease.values()) {
-            isVaccinated.put(d, false);
+            isVaccinated.put(d, false); // alle
         }
     }
 
@@ -99,5 +100,13 @@ abstract class Animal implements Vaccinateable, Treatable {
 
     public static void setAnimalId(int animalId) {
         Animal.animalId = animalId;
+    }
+
+    @Override
+    public String toString() {
+        return "name='" + name + '\'' +
+                ", age=" + age +
+                ", number=" + animalNumber +
+                '}';
     }
 }
