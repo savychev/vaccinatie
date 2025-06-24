@@ -2,7 +2,7 @@ import java.util.*;
 
 public class AnimalShelter {
     private List<Animal> animals = new ArrayList<>(); // lijst met alle dieren
-    private int animalId = 1; // ID-teller voor nieuwe dieren
+    // private int animalId = 1; // volgens opdracht moet er hier  staan, maar ik deze in constructor van Animals heb realiseren
 
     // voegt dier toe en wijst uniek diernummer toe via animalId++
     public void addAnimal(Animal animal) {
