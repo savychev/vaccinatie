@@ -16,7 +16,7 @@ abstract class Animal implements Vaccinateable, Treatable {
         this.age = 0;
         this.isClean = false;
         this.isVaccinated = new EnumMap<>(Disease.class); // is een speciale soort Map in Java die alleen gebruikt wordt met enum.
-        // We gebruiken het, omdat EnumMap moet weten welk enum-type je als sleutel gebruikt, en dat geef je zo aan.
+        // We gebruiken het (Disease.class), omdat EnumMap moet weten welk enum-type je als sleutel gebruikt, en dat geef je zo aan.
         for (Disease d : Disease.values()) {
             isVaccinated.put(d, false); // alle
         }
