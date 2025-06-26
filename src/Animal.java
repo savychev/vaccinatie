@@ -52,8 +52,6 @@ abstract class Animal implements Vaccinateable, Treatable {
     }
 
     // Getters en setters
-
-
     public int getAnimalNumber() {
         return animalNumber;
     }
