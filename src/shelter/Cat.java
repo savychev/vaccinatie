@@ -1,3 +1,4 @@
+package shelter;
 public class Cat extends Animal {
     private boolean hasLongNails;
 

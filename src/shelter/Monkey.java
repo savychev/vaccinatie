@@ -1,3 +1,4 @@
+package shelter;
 public class Monkey extends Animal {
     private boolean isHyperActive;
 

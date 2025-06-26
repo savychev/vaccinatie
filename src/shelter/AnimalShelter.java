@@ -1,3 +1,4 @@
+package shelter;
 import java.util.*;
 
 public class AnimalShelter {
