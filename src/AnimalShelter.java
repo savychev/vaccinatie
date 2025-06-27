@@ -92,12 +92,6 @@ public class AnimalShelter {
     public Animal findOldestAnimal() {
         if (animals.isEmpty()) return null;
 
-        Animal oldest = animals.get(0);
-        for (Animal a : animals) {
-            if (a.getAge() > oldest.getAge()) {
-                oldest = a;
-            }
-        }
-        return oldest;
+        return Collections.max(animals, Comparator.comparingInt(Animal::getAge));
     }
 }
