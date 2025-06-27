@@ -47,7 +47,12 @@ public class AnimalShelter {
 
     // zoekt dier met opgegeven diernummer
     public Animal findAnimal(int number) {
-        return animals.get(number);
+        for (Animal a : animals) {
+            if (a.getAnimalNumber() == number) {
+                return a;
+            }
+        }
+        return null;
     }
 
     // zoekt dier op naam
